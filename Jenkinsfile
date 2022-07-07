@@ -6,11 +6,7 @@ node{
    stage('SCM Checkout'){
      git 'https://github.com/KpUser12/Jenkins_war.git'
    }
-   stage('Compile-Package-create-war-file'){
-      // Get maven home path
-      def mvnHome =  tool name: 'maven', type: 'maven'   
-      bat "${mvnHome}/bin/mvn package"
-      }
+   stage('Compile-Package-create-war-file')
 /*   stage ('Stop Tomcat Server') {
                bat ''' @ECHO OFF
                wmic process list brief | find /i "tomcat" > NUL
